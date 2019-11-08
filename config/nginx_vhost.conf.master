@@ -70,10 +70,6 @@ server {
             ssi on;
         }
 </tmpl_if>
-
-location / {
-try_files $uri $uri/ /index.php?$args;
-}
 		
 <tmpl_if name='logging' op='==' value='yes'>
         error_log /var/log/ispconfig/httpd/<tmpl_var name='domain'>/error.log;
